@@ -1,0 +1,13 @@
+.queryForm {
+  display: flex;
+  gap: 8px;
+}
+
+.query {
+    border-color:  #1e748e;
+    border-radius: 4px;
+    width:400px;
+    height: 40px;
+    padding: 4px;
+    color: #1e748e;
+}
