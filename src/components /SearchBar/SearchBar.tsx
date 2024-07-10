@@ -1,12 +1,20 @@
 import css from './SearchBar.module.css'
 import { useId } from 'react'
-import { Field, Formik, Form } from 'formik'
+import { Field, Formik, Form, FormikHelpers } from 'formik'
 import { toast } from 'react-toastify'
 
-const SearchBar = ({ submit }) => {
+interface SearchBarProps {
+    submit:(query:string)=>void;
+}
+
+interface FormValues {
+    query:string;
+}
+
+const SearchBar:React.FC<SearchBarProps> = ({ submit }) => {
     const searchBarId = useId()
 
-    const handleSubmit = (values, actions) => {
+    const handleSubmit = (values:FormValues, actions: FormikHelpers<FormValues>) => {
         if (!values.query.trim()) {
             toast.error('Search query cannot be empty.')
             return

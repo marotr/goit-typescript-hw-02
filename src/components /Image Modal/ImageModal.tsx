@@ -1,9 +1,13 @@
 import ReactModal from "react-modal";
 import css from './ImageModal.module.css'
 import { AiOutlineClose } from "react-icons/ai";
+import { ImageModalProps } from "../../interfaces/interfaces";
 
 
-const ImageModal = ({image,  modalIsOpen, closeModal}) => 
+
+
+
+const ImageModal:React.FC <ImageModalProps>= ({image,  modalIsOpen, closeModal}) => 
      {
     
         const {
@@ -16,11 +20,10 @@ const ImageModal = ({image,  modalIsOpen, closeModal}) =>
   return (
     <div > 
     
-    <ReactModal overlayClassName={css.overlay} className={css.modalContent}
-
-      
+    <ReactModal 
+     overlayClassName={css.overlay}
+     className={css.modalContent}
       isOpen={modalIsOpen}
-      
       onRequestClose={closeModal}
       contentLabel="ImageModal"
     >
