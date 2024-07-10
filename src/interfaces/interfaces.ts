@@ -31,7 +31,6 @@ export interface User{
 
  export  interface ImageCardProps {
     image: ImageData;
-
     onClick: () => void; 
   }
 

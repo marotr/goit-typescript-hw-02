@@ -72,7 +72,7 @@ const App: React.FC = () => {
     <>
       <SearchBar submit={handleSubmit} />
       {isLoading && <Loader />}
-      {error && <ErrorMessage/>}
+      {error && <ErrorMessage name = "apiError"/>}
       {images.length > 0 && <ImageGallery images={images} onImageClick={openModal} />}
       {images.length > 0 && <LoadMoreBtn handleLoadMore={handleLoadMore} />}
       {selectedImage && (

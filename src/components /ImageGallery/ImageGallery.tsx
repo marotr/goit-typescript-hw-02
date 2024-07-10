@@ -6,7 +6,7 @@ import css from './ImageGallery.module.css';
 interface ImageGalleryProps {
   images: ImageData [];
   onImageClick: (image: ImageData) => void;
-  onClick: () => void;
+ 
 }
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images, onImageClick }) => {
