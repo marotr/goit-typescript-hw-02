@@ -3,7 +3,7 @@ import {QueryParams, ImageData} from '../../interfaces/interfaces'
 
 
 axios.defaults.baseURL = 'https://api.unsplash.com';
-const CLIENT_ID = process.env.UNSPLASH_CLIENT_ID ||'otANXC1EJFsVllXe4H6I4all7gWw62R5SlyCizaq6X4';
+const CLIENT_ID = 'otANXC1EJFsVllXe4H6I4all7gWw62R5SlyCizaq6X4';
 
 const fetchApi = async <T>(url: string, params: Record<string, any>): Promise<T> => {
   try {
